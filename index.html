@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/styles/styles.css" />
+    <link rel="stylesheet" href="assets/vendor/bootstrap-5.3.8-dist/css/bootstrap.min.css" />
+</head>
+
+<body>
+    <div class="container mt-5 main">
+        <container class="text-center mt-5 justify-content-center align-items-center">
+            <b>
+                <h1>Welcome to Hangman Game</h1>
+            </b>
+            <p>
+                Hangman is a classic word-guessing game where players try to guess a
+                hidden word by suggesting letters within a certain number of attempts.
+                The game is typically played with a drawing of a gallows and a stick
+                figure representing the hangman. Each incorrect guess results in
+                adding a part to the hangman figure, and the game ends when the figure
+                is fully drawn or the word is guessed correctly.
+            </p>
+            <br />
+            <h2>Objective</h2>
+            <p>
+                The objective of Hangman is to guess the hidden word before running
+                out of attempts. The game tests your vocabulary and guessing skills
+                while providing an entertaining challenge.
+            </p>
+            <br />
+        </container>
+        <div class="text-center p-10 w-60 h-60 mx-auto dropdown">
+            <h2>Select Category</h2>
+
+            <select id="Category" class="form-select" aria-label="Default select example">
+                <option selected>Open this select menu</option>
+                <option value="Food">Food</option>
+                <option value="Animal">Animal</option>
+                <option value="countries">countries</option>
+                <option value="fruits">fruits</option>
+            </select>
+            <br />
+        </div>
+        <script></script>
+
+        <div class="text-center">
+            <button type="button" id="Start-Game" class="btn btn-primary">
+                Start Game
+            </button>
+        </div>
+        <h2 class="text-center">Enjoy Playing!</h2>
+        <br />
+    </div>
+    <script src="assets/vendor/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const Startgame = document.getElementById("Start-Game");
+        Startgame.addEventListener("click", () => {
+            const category = document.getElementById("Category").value;
+            if (category === "Open this select menu") {
+                alert("Please select a category to start the game.");
+                return;
+            }
+            localStorage.setItem("Category", category);
+            window.location.href = "game.html";
+        });
+    </script>
+</body>
+
+</html>

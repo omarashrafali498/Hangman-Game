@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <container class="text-center mt-5  justify-content-center align-items-center">
+        <div>
+            <h1 class="my-4">Hangman Game</h1>
+            <div class="hangman">
+                <div class="gallows"></div>
+                <div class="head hidden"></div>
+                <div class="body hidden"></div>
+                <div class="arm left hidden"></div>
+                <div class="arm right hidden"></div>
+                <div class="leg left hidden"></div>
+                <div class="leg right hidden"></div>
+            </div>
+            <div id="word-container" class="mb-4">
+                <h2 id="word-display"></h2>
+            </div>
+            <div id="keyboard" class="mb-4">
+                <!-- Letters will be dynamically added here -->
+            </div>
+            <div id="message" class="mb-4"></div>
+            <button id="reset-button" onclick="resetGame()" class="btn btn-primary">Reset Game</button>
+            <button id="new-word-button" class="btn btn-primary">New Category</button>
+        </div>
+    </container>
+    <script src="assets/js/index.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.hangman {
+  position: relative;
+  width: 200px;
+  height: 250px;
+  margin: 20px auto;
+}
+
+/* Gallows */
+.gallows {
+  width: 10px;
+  height: 200px;
+  background: black;
+  position: absolute;
+  left: 50px;
+  bottom: 0;
+}
+.gallows::before {
+  content: "";
+  width: 100px;
+  height: 10px;
+  background: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.gallows::after {
+  content: "";
+  width: 10px;
+  height: 40px;
+  background: black;
+  position: absolute;
+  top: 0;
+  left: 100px;
+}
+
+/* Hangman parts */
+.head {
+  width: 40px;
+  height: 40px;
+  border: 3px solid black;
+  border-radius: 50%;
+  position: absolute;
+  top: 90px;
+  right: 50px;
+  left: 135px;
+}
+.body {
+  width: 3px;
+  height: 60px;
+  background: black;
+  position: absolute;
+  top: 127px;
+  left: 154px;
+}
+.arm {
+  width: 40px;
+  height: 3px;
+  background: black;
+  position: absolute;
+  top: 140px;
+}
+.arm.left {
+  left: 117px;
+  transform: rotate(30deg);
+}
+.arm.right {
+  left: 152px;
+  transform: rotate(-30deg);
+}
+.leg {
+  width: 40px;
+  height: 3px;
+  background: black;
+  position: absolute;
+  top: 185px;
+}
+.leg.left {
+  left: 117px;
+  transform: rotate(-30deg);
+}
+.leg.right {
+  left: 152px;
+  transform: rotate(30deg);
+}
+
+/* Hide initially */
+.head,
+.body,
+.arm.left,
+.arm.right,
+.leg.left,
+.leg.right {
+  display: none;
+}
+ol ,li  {
+  text-align: justify;
+  text-decoration: none;
+  
+}
+.dropdown {
+  margin: 10px;
+  padding: 10px;
+  width: 200px;
+  border-radius: 5px;
+}
+.main
+{
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
